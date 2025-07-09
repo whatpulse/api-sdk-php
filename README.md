@@ -11,23 +11,11 @@ PHP 8.1 and later.
 
 ### Composer
 
-To install the bindings via [Composer](https://getcomposer.org/), add the following to `composer.json`:
+To install the bindings via [Composer](https://getcomposer.org/), run:
 
-```json
-{
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
-    }
-  ],
-  "require": {
-    "GIT_USER_ID/GIT_REPO_ID": "*@dev"
-  }
-}
+```bash
+composer require whatpulse/sdk-php
 ```
-
-Then run `composer install`
 
 ### Manual Installation
 

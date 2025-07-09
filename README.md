@@ -16,6 +16,10 @@ To install the bindings via [Composer](https://getcomposer.org/), run:
 composer require whatpulse/sdk-php
 ```
 
+## API Key
+
+To use the WhatPulse API, you'll need an API key. You can generate one by visiting: http://whatpulse.org/go/settings-api-keys
+
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:

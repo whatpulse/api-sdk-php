@@ -1,5 +1,5 @@
 {
-    "name": "whatpulse/sdk-php",
+    "name": "whatpulse/api-sdk-php",
     "description": "Public API for WhatPulse user data access. This API allows authenticated users to access their own data and public data from other users, depending on privacy settings.",
     "keywords": [
         "openapitools",
@@ -10,7 +10,7 @@
         "rest",
         "api"
     ],
-    "homepage": "https://github.com/whatpulse/sdk-php",
+    "homepage": "https://github.com/whatpulse/api-sdk-php",
     "license": "MIT",
     "authors": [
         {

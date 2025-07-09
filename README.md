@@ -13,12 +13,12 @@ PHP 8.1 and later.
 To install the bindings via [Composer](https://getcomposer.org/), run:
 
 ```bash
-composer require whatpulse/sdk-php
+composer require whatpulse/api-sdk-php
 ```
 
 ## API Key
 
-To use the WhatPulse API, you'll need an API key. You can generate one by visiting: http://whatpulse.org/go/settings-api-keys
+To use the WhatPulse API, you'll need an API key. You can generate one by visiting: https://whatpulse.org/go/settings-api-keys
 
 ## Getting Started
 

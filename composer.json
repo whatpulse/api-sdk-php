@@ -10,8 +10,8 @@
         "rest",
         "api"
     ],
-    "homepage": "https://openapi-generator.tech",
-    "license": "unlicense",
+    "homepage": "https://github.com/whatpulse/sdk-php",
+    "license": "MIT",
     "authors": [
         {
             "name": "WhatPulse",

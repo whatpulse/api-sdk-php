@@ -1,7 +1,6 @@
-# OpenAPIClient-php
+# WhatPulse PHP SDK
 
 Public API for WhatPulse user data access. This API allows authenticated users to access their own data and public data from other users, depending on privacy settings.
-
 
 ## Installation & Usage
 
@@ -17,15 +16,6 @@ To install the bindings via [Composer](https://getcomposer.org/), run:
 composer require whatpulse/sdk-php
 ```
 
-### Manual Installation
-
-Download the files and include `autoload.php`:
-
-```php
-<?php
-require_once('/path/to/OpenAPIClient-php/vendor/autoload.php');
-```
-
 ## Getting Started
 
 Please follow the [installation procedure](#installation--usage) and then run the following:
@@ -34,11 +24,8 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
-
 // Configure Bearer authorization: http
 $config = WhatPulse\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new WhatPulse\Api\ComputersApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -143,8 +130,6 @@ vendor/bin/phpunit
 ```
 
 ## Author
-
-
 
 ## About this package
 

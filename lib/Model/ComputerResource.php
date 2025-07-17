@@ -65,7 +65,7 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
         'totals' => '\WhatPulse\Model\ComputerResourceTotals',
         'pulses' => 'int',
         'last_pulse_date' => 'string',
-        'hardware' => 'mixed[]'
+        'hardware' => 'array<string,mixed>'
     ];
 
     /**
@@ -641,7 +641,7 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets hardware
      *
-     * @return mixed[]
+     * @return array<string,mixed>
      */
     public function getHardware()
     {
@@ -651,7 +651,7 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets hardware
      *
-     * @param mixed[] $hardware Hardware specifications and peripherals, if available.
+     * @param array<string,mixed> $hardware Hardware specifications and peripherals, if available.
      *
      * @return self
      */

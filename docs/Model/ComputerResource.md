@@ -12,6 +12,6 @@ Name | Type | Description | Notes
 **totals** | [**\WhatPulse\Model\ComputerResourceTotals**](ComputerResourceTotals.md) |  |
 **pulses** | **int** | The total number of pulses recorded for this computer. |
 **last_pulse_date** | **string** | The date and time of the last pulse recorded for this computer. |
-**hardware** | **mixed[]** | Hardware specifications and peripherals, if available. |
+**hardware** | **object[]** | Hardware specifications and peripherals, if available. |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

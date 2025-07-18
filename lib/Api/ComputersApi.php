@@ -131,7 +131,7 @@ class ComputersApi
      * Get user computers
      *
      * @param  string $id User ID or username (required)
-     * @param  string|null $is_archived Get filter parameters (optional)
+     * @param  bool|null $is_archived is_archived (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersComputers'] to see the possible values for this operation
      *
      * @throws \WhatPulse\ApiException on non-2xx response or if the response body is not in the expected format
@@ -150,7 +150,7 @@ class ComputersApi
      * Get user computers
      *
      * @param  string $id User ID or username (required)
-     * @param  string|null $is_archived Get filter parameters (optional)
+     * @param  bool|null $is_archived (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersComputers'] to see the possible values for this operation
      *
      * @throws \WhatPulse\ApiException on non-2xx response or if the response body is not in the expected format
@@ -264,7 +264,7 @@ class ComputersApi
      * Get user computers
      *
      * @param  string $id User ID or username (required)
-     * @param  string|null $is_archived Get filter parameters (optional)
+     * @param  bool|null $is_archived (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersComputers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -286,7 +286,7 @@ class ComputersApi
      * Get user computers
      *
      * @param  string $id User ID or username (required)
-     * @param  string|null $is_archived Get filter parameters (optional)
+     * @param  bool|null $is_archived (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersComputers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -337,7 +337,7 @@ class ComputersApi
      * Create request for operation 'v1UsersComputers'
      *
      * @param  string $id User ID or username (required)
-     * @param  string|null $is_archived Get filter parameters (optional)
+     * @param  bool|null $is_archived (optional)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['v1UsersComputers'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -366,7 +366,7 @@ class ComputersApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $is_archived,
             'is_archived', // param base name
-            'string', // openApiType
+            'boolean', // openApiType
             'form', // style
             true, // explode
             false // required

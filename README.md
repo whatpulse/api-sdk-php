@@ -38,7 +38,7 @@ $apiInstance = new WhatPulse\Api\ComputersApi(
     $config
 );
 $id = 'id_example'; // string | User ID or username
-$is_archived = 'is_archived_example'; // string | Get filter parameters
+$is_archived = True; // bool
 
 try {
     $result = $apiInstance->v1UsersComputers($id, $is_archived);
@@ -51,7 +51,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://whatpulse.org/api/v1*
+All URIs are relative to *https://whatpulse.test/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

@@ -1,40 +1,44 @@
 {
-    "name": "whatpulse/api-sdk-php",
-    "version": "1.0.0",
-    "description": "Public API for WhatPulse user data access. This API allows authenticated users to access their own data and public data from other users, depending on privacy settings.",
-    "keywords": [
-        "openapitools",
-        "openapi-generator",
-        "openapi",
-        "php",
-        "sdk",
-        "rest",
-        "api"
-    ],
-    "homepage": "https://github.com/whatpulse/api-sdk-php",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "WhatPulse",
-            "homepage": "https://whatpulse.org"
-        }
-    ],
-    "require": {
-        "php": "^8.1",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-mbstring": "*",
-        "guzzlehttp/guzzle": "^7.3",
-        "guzzlehttp/psr7": "^1.7 || ^2.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^8.0 || ^9.0",
-        "friendsofphp/php-cs-fixer": "^3.5"
-    },
-    "autoload": {
-        "psr-4": { "WhatPulse\\" : "lib/" }
-    },
-    "autoload-dev": {
-        "psr-4": { "WhatPulse\\Test\\" : "test/" }
+  "name": "whatpulse/api-sdk-php",
+  "version": "1.0.0",
+  "description": "Public API for WhatPulse user data access. This API allows authenticated users to access their own data and public data from other users, depending on privacy settings.",
+  "keywords": [
+    "openapitools",
+    "openapi-generator",
+    "openapi",
+    "php",
+    "sdk",
+    "rest",
+    "api"
+  ],
+  "homepage": "https://github.com/whatpulse/api-sdk-php",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "WhatPulse",
+      "homepage": "https://whatpulse.org"
     }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "guzzlehttp/guzzle": "^7.3",
+    "guzzlehttp/psr7": "^1.7 || ^2.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^8.0 || ^9.0",
+    "friendsofphp/php-cs-fixer": "^3.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "WhatPulse\\": "lib/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WhatPulse\\Test\\": "test/"
+    }
+  }
 }

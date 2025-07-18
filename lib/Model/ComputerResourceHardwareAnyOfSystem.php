@@ -1,6 +1,6 @@
 <?php
 /**
- * ComputerResource
+ * ComputerResourceHardwareAnyOfSystem
  *
  * PHP version 8.1
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \WhatPulse\ObjectSerializer;
 
 /**
- * ComputerResource Class Doc Comment
+ * ComputerResourceHardwareAnyOfSystem Class Doc Comment
  *
  * @category Class
  * @package  WhatPulse
@@ -40,7 +40,7 @@ use \WhatPulse\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
+class ComputerResourceHardwareAnyOfSystem implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
       *
       * @var string
       */
-    protected static $openAPIModelName = 'ComputerResource';
+    protected static $openAPIModelName = 'ComputerResource_hardware_anyOf_system';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,15 +57,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'name' => 'string',
-        'client_version' => 'string',
+        'model' => 'string',
+        'platform' => 'string',
         'os' => 'string',
-        'is_archived' => 'bool',
-        'totals' => '\WhatPulse\Model\ComputerResourceTotals',
-        'pulses' => 'int',
-        'last_pulse_date' => 'string',
-        'hardware' => '\WhatPulse\Model\ComputerResourceHardware'
+        'cpu' => 'string',
+        'memory_mb' => 'int',
+        'video' => 'string'
     ];
 
     /**
@@ -76,15 +73,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null,
-        'client_version' => null,
+        'model' => null,
+        'platform' => null,
         'os' => null,
-        'is_archived' => null,
-        'totals' => null,
-        'pulses' => null,
-        'last_pulse_date' => null,
-        'hardware' => null
+        'cpu' => null,
+        'memory_mb' => null,
+        'video' => null
     ];
 
     /**
@@ -93,15 +87,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-        'name' => false,
-        'client_version' => false,
-        'os' => false,
-        'is_archived' => false,
-        'totals' => false,
-        'pulses' => true,
-        'last_pulse_date' => true,
-        'hardware' => false
+        'model' => true,
+        'platform' => true,
+        'os' => true,
+        'cpu' => true,
+        'memory_mb' => true,
+        'video' => true
     ];
 
     /**
@@ -190,15 +181,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'client_version' => 'client_version',
+        'model' => 'model',
+        'platform' => 'platform',
         'os' => 'os',
-        'is_archived' => 'is_archived',
-        'totals' => 'totals',
-        'pulses' => 'pulses',
-        'last_pulse_date' => 'last_pulse_date',
-        'hardware' => 'hardware'
+        'cpu' => 'cpu',
+        'memory_mb' => 'memory_mb',
+        'video' => 'video'
     ];
 
     /**
@@ -207,15 +195,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName',
-        'client_version' => 'setClientVersion',
+        'model' => 'setModel',
+        'platform' => 'setPlatform',
         'os' => 'setOs',
-        'is_archived' => 'setIsArchived',
-        'totals' => 'setTotals',
-        'pulses' => 'setPulses',
-        'last_pulse_date' => 'setLastPulseDate',
-        'hardware' => 'setHardware'
+        'cpu' => 'setCpu',
+        'memory_mb' => 'setMemoryMb',
+        'video' => 'setVideo'
     ];
 
     /**
@@ -224,15 +209,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName',
-        'client_version' => 'getClientVersion',
+        'model' => 'getModel',
+        'platform' => 'getPlatform',
         'os' => 'getOs',
-        'is_archived' => 'getIsArchived',
-        'totals' => 'getTotals',
-        'pulses' => 'getPulses',
-        'last_pulse_date' => 'getLastPulseDate',
-        'hardware' => 'getHardware'
+        'cpu' => 'getCpu',
+        'memory_mb' => 'getMemoryMb',
+        'video' => 'getVideo'
     ];
 
     /**
@@ -276,23 +258,6 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
         return self::$openAPIModelName;
     }
 
-    public const OS_WINDOWS = 'windows';
-    public const OS_MACOS = 'macos';
-    public const OS_LINUX = 'linux';
-
-    /**
-     * Gets allowable values of the enum
-     *
-     * @return string[]
-     */
-    public function getOsAllowableValues()
-    {
-        return [
-            self::OS_WINDOWS,
-            self::OS_MACOS,
-            self::OS_LINUX,
-        ];
-    }
 
     /**
      * Associative array for storing property values
@@ -309,15 +274,12 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     public function __construct(?array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
-        $this->setIfExists('client_version', $data ?? [], null);
+        $this->setIfExists('model', $data ?? [], null);
+        $this->setIfExists('platform', $data ?? [], null);
         $this->setIfExists('os', $data ?? [], null);
-        $this->setIfExists('is_archived', $data ?? [], null);
-        $this->setIfExists('totals', $data ?? [], null);
-        $this->setIfExists('pulses', $data ?? [], null);
-        $this->setIfExists('last_pulse_date', $data ?? [], null);
-        $this->setIfExists('hardware', $data ?? [], null);
+        $this->setIfExists('cpu', $data ?? [], null);
+        $this->setIfExists('memory_mb', $data ?? [], null);
+        $this->setIfExists('video', $data ?? [], null);
     }
 
     /**
@@ -347,41 +309,23 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
     {
         $invalidProperties = [];
 
-        if ($this->container['id'] === null) {
-            $invalidProperties[] = "'id' can't be null";
+        if ($this->container['model'] === null) {
+            $invalidProperties[] = "'model' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['client_version'] === null) {
-            $invalidProperties[] = "'client_version' can't be null";
+        if ($this->container['platform'] === null) {
+            $invalidProperties[] = "'platform' can't be null";
         }
         if ($this->container['os'] === null) {
             $invalidProperties[] = "'os' can't be null";
         }
-        $allowedValues = $this->getOsAllowableValues();
-        if (!is_null($this->container['os']) && !in_array($this->container['os'], $allowedValues, true)) {
-            $invalidProperties[] = sprintf(
-                "invalid value '%s' for 'os', must be one of '%s'",
-                $this->container['os'],
-                implode("', '", $allowedValues)
-            );
+        if ($this->container['cpu'] === null) {
+            $invalidProperties[] = "'cpu' can't be null";
         }
-
-        if ($this->container['is_archived'] === null) {
-            $invalidProperties[] = "'is_archived' can't be null";
+        if ($this->container['memory_mb'] === null) {
+            $invalidProperties[] = "'memory_mb' can't be null";
         }
-        if ($this->container['totals'] === null) {
-            $invalidProperties[] = "'totals' can't be null";
-        }
-        if ($this->container['pulses'] === null) {
-            $invalidProperties[] = "'pulses' can't be null";
-        }
-        if ($this->container['last_pulse_date'] === null) {
-            $invalidProperties[] = "'last_pulse_date' can't be null";
-        }
-        if ($this->container['hardware'] === null) {
-            $invalidProperties[] = "'hardware' can't be null";
+        if ($this->container['video'] === null) {
+            $invalidProperties[] = "'video' can't be null";
         }
         return $invalidProperties;
     }
@@ -399,82 +343,69 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
 
 
     /**
-     * Gets id
+     * Gets model
      *
-     * @return int
+     * @return string
      */
-    public function getId()
+    public function getModel()
     {
-        return $this->container['id'];
+        return $this->container['model'];
     }
 
     /**
-     * Sets id
+     * Sets model
      *
-     * @param int $id The unique identifier for the computer.
+     * @param string $model The model of the computer.
      *
      * @return self
      */
-    public function setId($id)
+    public function setModel($model)
     {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
+        if (is_null($model)) {
+            array_push($this->openAPINullablesSetToNull, 'model');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('model', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['id'] = $id;
+        $this->container['model'] = $model;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets platform
      *
      * @return string
      */
-    public function getName()
+    public function getPlatform()
     {
-        return $this->container['name'];
+        return $this->container['platform'];
     }
 
     /**
-     * Sets name
+     * Sets platform
      *
-     * @param string $name How the computer is named on the user's account.
+     * @param string $platform The platform of the computer. I.e., x86, x64, ARM, etc.
      *
      * @return self
      */
-    public function setName($name)
+    public function setPlatform($platform)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($platform)) {
+            array_push($this->openAPINullablesSetToNull, 'platform');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('platform', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets client_version
-     *
-     * @return string
-     */
-    public function getClientVersion()
-    {
-        return $this->container['client_version'];
-    }
-
-    /**
-     * Sets client_version
-     *
-     * @param string $client_version The version of the WhatPulse client running on this computer.
-     *
-     * @return self
-     */
-    public function setClientVersion($client_version)
-    {
-        if (is_null($client_version)) {
-            throw new \InvalidArgumentException('non-nullable client_version cannot be null');
-        }
-        $this->container['client_version'] = $client_version;
+        $this->container['platform'] = $platform;
 
         return $this;
     }
@@ -492,24 +423,21 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets os
      *
-     * @param string $os The operating system of the computer, represented as code.
+     * @param string $os The operating system of the computer. Long version name, e.g., \"Windows 10 Pro\", \"macOS Monterey\".
      *
      * @return self
      */
     public function setOs($os)
     {
         if (is_null($os)) {
-            throw new \InvalidArgumentException('non-nullable os cannot be null');
-        }
-        $allowedValues = $this->getOsAllowableValues();
-        if (!in_array($os, $allowedValues, true)) {
-            throw new \InvalidArgumentException(
-                sprintf(
-                    "Invalid value '%s' for 'os', must be one of '%s'",
-                    $os,
-                    implode("', '", $allowedValues)
-                )
-            );
+            array_push($this->openAPINullablesSetToNull, 'os');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('os', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
         $this->container['os'] = $os;
 
@@ -517,150 +445,103 @@ class ComputerResource implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets is_archived
-     *
-     * @return bool
-     */
-    public function getIsArchived()
-    {
-        return $this->container['is_archived'];
-    }
-
-    /**
-     * Sets is_archived
-     *
-     * @param bool $is_archived Whether or not this computer is archived.
-     *
-     * @return self
-     */
-    public function setIsArchived($is_archived)
-    {
-        if (is_null($is_archived)) {
-            throw new \InvalidArgumentException('non-nullable is_archived cannot be null');
-        }
-        $this->container['is_archived'] = $is_archived;
-
-        return $this;
-    }
-
-    /**
-     * Gets totals
-     *
-     * @return \WhatPulse\Model\ComputerResourceTotals
-     */
-    public function getTotals()
-    {
-        return $this->container['totals'];
-    }
-
-    /**
-     * Sets totals
-     *
-     * @param \WhatPulse\Model\ComputerResourceTotals $totals totals
-     *
-     * @return self
-     */
-    public function setTotals($totals)
-    {
-        if (is_null($totals)) {
-            throw new \InvalidArgumentException('non-nullable totals cannot be null');
-        }
-        $this->container['totals'] = $totals;
-
-        return $this;
-    }
-
-    /**
-     * Gets pulses
-     *
-     * @return int
-     */
-    public function getPulses()
-    {
-        return $this->container['pulses'];
-    }
-
-    /**
-     * Sets pulses
-     *
-     * @param int $pulses The total number of pulses recorded for this computer.
-     *
-     * @return self
-     */
-    public function setPulses($pulses)
-    {
-        if (is_null($pulses)) {
-            array_push($this->openAPINullablesSetToNull, 'pulses');
-        } else {
-            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('pulses', $nullablesSetToNull);
-            if ($index !== FALSE) {
-                unset($nullablesSetToNull[$index]);
-                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
-            }
-        }
-        $this->container['pulses'] = $pulses;
-
-        return $this;
-    }
-
-    /**
-     * Gets last_pulse_date
+     * Gets cpu
      *
      * @return string
      */
-    public function getLastPulseDate()
+    public function getCpu()
     {
-        return $this->container['last_pulse_date'];
+        return $this->container['cpu'];
     }
 
     /**
-     * Sets last_pulse_date
+     * Sets cpu
      *
-     * @param string $last_pulse_date The date and time of the last pulse recorded for this computer.
+     * @param string $cpu The CPU information of the computer.
      *
      * @return self
      */
-    public function setLastPulseDate($last_pulse_date)
+    public function setCpu($cpu)
     {
-        if (is_null($last_pulse_date)) {
-            array_push($this->openAPINullablesSetToNull, 'last_pulse_date');
+        if (is_null($cpu)) {
+            array_push($this->openAPINullablesSetToNull, 'cpu');
         } else {
             $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
-            $index = array_search('last_pulse_date', $nullablesSetToNull);
+            $index = array_search('cpu', $nullablesSetToNull);
             if ($index !== FALSE) {
                 unset($nullablesSetToNull[$index]);
                 $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
             }
         }
-        $this->container['last_pulse_date'] = $last_pulse_date;
+        $this->container['cpu'] = $cpu;
 
         return $this;
     }
 
     /**
-     * Gets hardware
+     * Gets memory_mb
      *
-     * @return \WhatPulse\Model\ComputerResourceHardware
+     * @return int
      */
-    public function getHardware()
+    public function getMemoryMb()
     {
-        return $this->container['hardware'];
+        return $this->container['memory_mb'];
     }
 
     /**
-     * Sets hardware
+     * Sets memory_mb
      *
-     * @param \WhatPulse\Model\ComputerResourceHardware $hardware hardware
+     * @param int $memory_mb The amount of memory in megabytes.
      *
      * @return self
      */
-    public function setHardware($hardware)
+    public function setMemoryMb($memory_mb)
     {
-        if (is_null($hardware)) {
-            throw new \InvalidArgumentException('non-nullable hardware cannot be null');
+        if (is_null($memory_mb)) {
+            array_push($this->openAPINullablesSetToNull, 'memory_mb');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('memory_mb', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['hardware'] = $hardware;
+        $this->container['memory_mb'] = $memory_mb;
+
+        return $this;
+    }
+
+    /**
+     * Gets video
+     *
+     * @return string
+     */
+    public function getVideo()
+    {
+        return $this->container['video'];
+    }
+
+    /**
+     * Sets video
+     *
+     * @param string $video The video processor information of the computer.
+     *
+     * @return self
+     */
+    public function setVideo($video)
+    {
+        if (is_null($video)) {
+            array_push($this->openAPINullablesSetToNull, 'video');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('video', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
+        }
+        $this->container['video'] = $video;
 
         return $this;
     }

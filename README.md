@@ -51,7 +51,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://whatpulse.org/api/v1*
+All URIs are relative to *https://whatpulse.test/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -73,6 +73,11 @@ Class | Method | HTTP request | Description
 - [ClientProfileResource](docs/Model/ClientProfileResource.md)
 - [ClientProfileResourceComputer](docs/Model/ClientProfileResourceComputer.md)
 - [ComputerResource](docs/Model/ComputerResource.md)
+- [ComputerResourceHardware](docs/Model/ComputerResourceHardware.md)
+- [ComputerResourceHardwareAnyOf](docs/Model/ComputerResourceHardwareAnyOf.md)
+- [ComputerResourceHardwareAnyOf1](docs/Model/ComputerResourceHardwareAnyOf1.md)
+- [ComputerResourceHardwareAnyOfPeripherals](docs/Model/ComputerResourceHardwareAnyOfPeripherals.md)
+- [ComputerResourceHardwareAnyOfSystem](docs/Model/ComputerResourceHardwareAnyOfSystem.md)
 - [ComputerResourceTotals](docs/Model/ComputerResourceTotals.md)
 - [DetailedSubteamResource](docs/Model/DetailedSubteamResource.md)
 - [DetailedSubteamResourceLinks](docs/Model/DetailedSubteamResourceLinks.md)

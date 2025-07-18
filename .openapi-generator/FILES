@@ -15,6 +15,11 @@ docs/Api/UsersApi.md
 docs/Model/ClientProfileResource.md
 docs/Model/ClientProfileResourceComputer.md
 docs/Model/ComputerResource.md
+docs/Model/ComputerResourceHardware.md
+docs/Model/ComputerResourceHardwareAnyOf.md
+docs/Model/ComputerResourceHardwareAnyOf1.md
+docs/Model/ComputerResourceHardwareAnyOfPeripherals.md
+docs/Model/ComputerResourceHardwareAnyOfSystem.md
 docs/Model/ComputerResourceTotals.md
 docs/Model/DetailedSubteamResource.md
 docs/Model/DetailedSubteamResourceLinks.md
@@ -75,6 +80,11 @@ lib/HeaderSelector.php
 lib/Model/ClientProfileResource.php
 lib/Model/ClientProfileResourceComputer.php
 lib/Model/ComputerResource.php
+lib/Model/ComputerResourceHardware.php
+lib/Model/ComputerResourceHardwareAnyOf.php
+lib/Model/ComputerResourceHardwareAnyOf1.php
+lib/Model/ComputerResourceHardwareAnyOfPeripherals.php
+lib/Model/ComputerResourceHardwareAnyOfSystem.php
 lib/Model/ComputerResourceTotals.php
 lib/Model/DetailedSubteamResource.php
 lib/Model/DetailedSubteamResourceLinks.php
@@ -121,3 +131,8 @@ lib/Model/V1UsersTimeSeries200Response.php
 lib/Model/V1UsersTimeSeries200ResponseFilters.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Model/ComputerResourceHardwareAnyOf1Test.php
+test/Model/ComputerResourceHardwareAnyOfPeripheralsTest.php
+test/Model/ComputerResourceHardwareAnyOfSystemTest.php
+test/Model/ComputerResourceHardwareAnyOfTest.php
+test/Model/ComputerResourceHardwareTest.php

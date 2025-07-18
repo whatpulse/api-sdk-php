@@ -51,7 +51,7 @@ try {
 
 ## API Endpoints
 
-All URIs are relative to *https://whatpulse.test/api/v1*
+All URIs are relative to *https://whatpulse.org/api/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

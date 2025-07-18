@@ -1,6 +1,6 @@
 # WhatPulse\PulsesApi
 
-All URIs are relative to https://whatpulse.test/api/v1, except if the operation defines another base path.
+All URIs are relative to https://whatpulse.org/api/v1, except if the operation defines another base path.
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |

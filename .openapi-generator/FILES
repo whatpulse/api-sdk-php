@@ -131,8 +131,3 @@ lib/Model/V1UsersTimeSeries200Response.php
 lib/Model/V1UsersTimeSeries200ResponseFilters.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
-test/Model/ComputerResourceHardwareAnyOf1Test.php
-test/Model/ComputerResourceHardwareAnyOfPeripheralsTest.php
-test/Model/ComputerResourceHardwareAnyOfSystemTest.php
-test/Model/ComputerResourceHardwareAnyOfTest.php
-test/Model/ComputerResourceHardwareTest.php
